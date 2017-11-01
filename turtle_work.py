@@ -1,0 +1,90 @@
+from turtle import *
+setup(600, 600)
+
+Screen()
+rose = Turtle()
+showturtle()
+
+
+def forward():
+    rose.forward(5)
+
+def shape():
+    rose.shape("turtle")
+
+def shape2():
+    rose.shape("classic")
+    
+def go_back():
+    rose.back(5)
+
+def left_key():
+    rose.left(10)
+
+def right_key():
+    rose.right(10)
+
+def space_bar():
+    if rose.isdown():
+        rose.penup()
+
+    else:
+        rose.pendown()
+
+def square():
+    rose.forward(50)
+    rose.left(90)
+    rose.forward(50)
+    rose.left(90)
+    rose.forward(50)
+    rose.left(90)
+    rose.forward(50)
+    rose.left(90)
+
+def circle():
+    for i in range(22):
+        rose.forward(61)
+        rose.left(68)
+
+    speed(10)
+
+def red():
+    rose.color("red")
+
+def green():
+    rose.color("green")
+
+def blue():
+    rose.color("blue")
+
+def purple():
+    rose.color("purple")
+
+def white():
+    rose.color("white")
+
+
+
+    
+
+
+onkeypress(forward, "Up")
+onkeypress(shape, "1")
+onkeypress(shape2, "2")
+onkeypress(go_back, "Down")
+onkeypress(left_key, "Left")
+onkeypress(right_key, "Right")
+onkeypress(space_bar, "space")
+onkeypress(square, "3")
+onkeypress(circle, "4")
+onkeypress(red, "r")
+onkeypress(green, "g")
+onkeypress(blue, "b")
+onkeypress(purple, "p")
+onkeypress(white, "w")
+
+
+
+
+listen()
+mainloop()
